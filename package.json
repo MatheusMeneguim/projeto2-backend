@@ -1,0 +1,24 @@
+{
+  "name": "projeto2-backend",
+  "version": "1.0.0",
+  "description": "Este é o primeiro estágio de um projeto de aplicação web com autenticação, focado na montagem da estrutura base do servidor Express e na criação das interfaces de usuário para as páginas de login e dashboard.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusMeneguim/projeto2-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatheusMeneguim/projeto2-backend/issues"
+  },
+  "homepage": "https://github.com/MatheusMeneguim/projeto2-backend#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
