@@ -1,96 +1,211 @@
+/* public/style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
+    background: linear-gradient(135deg, #71b7e6, #9b59b6); /* Gradiente de fundo suave */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     color: #333;
+    overflow: hidden; /* Evita barras de rolagem desnecessárias */
 }
 
 .container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
+    padding: 40px 50px; /* Mais padding para um visual mais espaçoso */
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
     text-align: center;
     width: 100%;
-    max-width: 400px;
+    max-width: 420px; /* Largura um pouco maior */
+    transition: transform 0.3s ease-in-out; /* Efeito suave ao focar */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Pequeno levantamento ao passar o mouse */
 }
 
 h2 {
-    color: #007bff;
-    margin-bottom: 30px;
-    font-size: 2em;
+    color: #4A4A4A; /* Cor mais escura para o título */
+    margin-bottom: 35px;
+    font-size: 2.5em; /* Título maior */
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px; /* Mais espaço entre os grupos de input */
     text-align: left;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 500; /* Peso da fonte mais leve */
     color: #555;
+    font-size: 0.95em;
 }
 
 .input-group input[type="text"],
 .input-group input[type="password"] {
     width: calc(100% - 20px);
     padding: 12px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box; /* Include padding in width */
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 8px; /* Bordas arredondadas nos inputs */
+    font-size: 1.0em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    outline: none; /* Remove a borda de foco padrão */
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    border-color: #71b7e6; /* Cor da borda ao focar */
+    box-shadow: 0 0 8px rgba(113, 183, 230, 0.4); /* Sombra suave ao focar */
 }
 
 button[type="submit"] {
-    background-color: #007bff;
+    background: linear-gradient(45deg, #71b7e6, #9b59b6); /* Gradiente no botão */
     color: white;
-    padding: 12px 25px;
+    padding: 14px 30px; /* Mais padding no botão */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Bordas arredondadas no botão */
     cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    font-size: 1.15em;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Transições suaves */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra no botão */
+    width: 100%; /* Botão com largura total */
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    transform: translateY(-2px); /* Pequeno levantamento no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra maior no hover */
+    opacity: 0.9;
 }
 
 .error-message {
     color: #dc3545;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+    font-weight: 500;
 }
 
-/* Dashboard specific styles */
+/* Estilos específicos para o Dashboard (manter consistência) */
 .container p {
     font-size: 1.1em;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #555;
 }
 
 .logout-button {
     background-color: #6c757d;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
 }
 
 .logout-button:hover {
     background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* public/style.css - Adicione a partir daqui */
+
+/* Estilos específicos para o Dashboard */
+.dashboard-container {
+    max-width: 900px; /* Largura maior para o dashboard */
+    padding: 30px; /* Ajuste o padding para o dashboard */
+}
+
+.dashboard-container h2 {
+    margin-bottom: 25px; /* Ajuste do espaçamento do título */
+}
+
+.welcome-message {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo com 2 colunas em telas maiores */
+    gap: 25px; /* Espaçamento entre os cartões */
+    margin-bottom: 40px; /* Espaço antes do botão de sair */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para o cartão */
+    padding: 25px;
+    text-align: left; /* Conteúdo alinhado à esquerda */
+    display: flex; /* Para alinhar ícone e conteúdo */
+    align-items: center; /* Alinha verticalmente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação no hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+}
+
+.card-icon {
+    font-size: 2.5em; /* Tamanho do ícone */
+    margin-right: 20px; /* Espaço entre ícone e texto */
+    color: #71b7e6; /* Cor do ícone, combinando com o tema */
+    flex-shrink: 0; /* Impede que o ícone diminua */
+}
+
+.card-content h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #4A4A4A;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.card-content .metric {
+    font-size: 1.8em; /* Tamanho maior para a métrica */
+    font-weight: 700;
+    color: #9b59b6; /* Cor de destaque para a métrica */
+    margin-bottom: 5px;
+}
+
+.card-content .description {
+    font-size: 0.9em;
+    color: #777;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Ajustes para telas menores (responsividade) */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+}
+
+/* Ajustes para o botão de logout no dashboard */
+.dashboard-container .logout-button {
+    width: auto; /* Deixa o botão de logout ter largura automática */
+    padding: 12px 30px;
+    margin-top: 30px; /* Espaço superior */
 }

@@ -1,27 +1,29 @@
+<!-- views/login.ejs -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Seu App</title> <!-- Título mais convidativo -->
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Entrar</h2>
+        <h2>Bem-vindo de Volta!</h2> <!-- Título mais amigável -->
         <% if (error) { %>
             <p class="error-message"><%= error %></p>
         <% } %>
         <form action="/login" method="POST">
             <div class="input-group">
-                <label for="username">Usuário:</label>
-                <input type="text" id="username" name="username" required autocomplete="username">
+                <label for="username">Usuário ou Email:</label>
+                <input type="text" id="username" name="username" placeholder="Digite seu usuário ou email" required>
             </div>
             <div class="input-group">
                 <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required autocomplete="current-password">
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit">Entrar</button>
         </form>
     </div>
 </body>
