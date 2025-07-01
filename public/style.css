@@ -1,51 +1,50 @@
-/* public/style.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif; /* Fonte mais moderna */
-    background: linear-gradient(135deg, #71b7e6, #9b59b6); /* Gradiente de fundo suave */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
     color: #333;
-    overflow: hidden; /* Evita barras de rolagem desnecessárias */
+    overflow-x: hidden;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco semi-transparente */
-    padding: 40px 50px; /* Mais padding para um visual mais espaçoso */
-    border-radius: 15px; /* Bordas mais arredondadas */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 100%;
-    max-width: 420px; /* Largura um pouco maior */
-    transition: transform 0.3s ease-in-out; /* Efeito suave ao focar */
+    max-width: 420px;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
 .container:hover {
-    transform: translateY(-5px); /* Pequeno levantamento ao passar o mouse */
+    transform: translateY(-5px);
 }
 
 h2 {
-    color: #4A4A4A; /* Cor mais escura para o título */
+    color: #4A4A4A;
     margin-bottom: 35px;
-    font-size: 2.5em; /* Título maior */
+    font-size: 2.5em;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
 .input-group {
-    margin-bottom: 25px; /* Mais espaço entre os grupos de input */
+    margin-bottom: 25px;
     text-align: left;
 }
 
 .input-group label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 500; /* Peso da fonte mais leve */
+    font-weight: 500;
     color: #555;
     font-size: 0.95em;
 }
@@ -54,37 +53,37 @@ h2 {
 .input-group input[type="password"] {
     width: calc(100% - 20px);
     padding: 12px 10px;
-    border: 1px solid #ddd; /* Borda suave */
-    border-radius: 8px; /* Bordas arredondadas nos inputs */
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 1.0em;
     box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
-    outline: none; /* Remove a borda de foco padrão */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
 }
 
 .input-group input[type="text"]:focus,
 .input-group input[type="password"]:focus {
-    border-color: #71b7e6; /* Cor da borda ao focar */
-    box-shadow: 0 0 8px rgba(113, 183, 230, 0.4); /* Sombra suave ao focar */
+    border-color: #71b7e6;
+    box-shadow: 0 0 8px rgba(113, 183, 230, 0.4);
 }
 
 button[type="submit"] {
-    background: linear-gradient(45deg, #71b7e6, #9b59b6); /* Gradiente no botão */
+    background: linear-gradient(45deg, #71b7e6, #9b59b6);
     color: white;
-    padding: 14px 30px; /* Mais padding no botão */
+    padding: 14px 30px;
     border: none;
-    border-radius: 8px; /* Bordas arredondadas no botão */
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1.15em;
     font-weight: 600;
-    transition: all 0.3s ease; /* Transições suaves */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra no botão */
-    width: 100%; /* Botão com largura total */
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 button[type="submit"]:hover {
-    transform: translateY(-2px); /* Pequeno levantamento no hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra maior no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     opacity: 0.9;
 }
 
@@ -99,7 +98,6 @@ button[type="submit"]:hover {
     font-weight: 500;
 }
 
-/* Estilos específicos para o Dashboard (manter consistência) */
 .container p {
     font-size: 1.1em;
     line-height: 1.6;
@@ -125,16 +123,17 @@ button[type="submit"]:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* public/style.css - Adicione a partir daqui */
-
-/* Estilos específicos para o Dashboard */
 .dashboard-container {
-    max-width: 900px; /* Largura maior para o dashboard */
-    padding: 30px; /* Ajuste o padding para o dashboard */
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    padding-top: 60px;
+    box-sizing: border-box;
 }
 
 .dashboard-container h2 {
-    margin-bottom: 25px; /* Ajuste do espaçamento do título */
+    margin-bottom: 25px;
 }
 
 .welcome-message {
@@ -146,32 +145,33 @@ button[type="submit"]:hover {
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo com 2 colunas em telas maiores */
-    gap: 25px; /* Espaçamento entre os cartões */
-    margin-bottom: 40px; /* Espaço antes do botão de sair */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
 }
 
 .card {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra suave para o cartão */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     padding: 25px;
-    text-align: left; /* Conteúdo alinhado à esquerda */
-    display: flex; /* Para alinhar ícone e conteúdo */
-    align-items: center; /* Alinha verticalmente */
+    text-align: left;
+    display: flex;
+    align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Efeito de elevação no hover */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra mais intensa no hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-icon {
-    font-size: 2.5em; /* Tamanho do ícone */
-    margin-right: 20px; /* Espaço entre ícone e texto */
-    color: #71b7e6; /* Cor do ícone, combinando com o tema */
-    flex-shrink: 0; /* Impede que o ícone diminua */
+    font-size: 2.5em;
+    margin-right: 20px;
+    color: #71b7e6;
+    flex-shrink: 0;
 }
 
 .card-content h3 {
@@ -183,9 +183,9 @@ button[type="submit"]:hover {
 }
 
 .card-content .metric {
-    font-size: 1.8em; /* Tamanho maior para a métrica */
+    font-size: 1.8em;
     font-weight: 700;
-    color: #9b59b6; /* Cor de destaque para a métrica */
+    color: #9b59b6;
     margin-bottom: 5px;
 }
 
@@ -196,16 +196,45 @@ button[type="submit"]:hover {
     margin-bottom: 0;
 }
 
-/* Ajustes para telas menores (responsividade) */
 @media (max-width: 768px) {
     .dashboard-grid {
-        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+        grid-template-columns: 1fr;
+    }
+    .dashboard-container {
+        padding: 20px;
+        padding-top: 50px;
+    }
+    .dashboard-logout-button {
+        top: 15px;
+        right: 15px;
+    }
+    .container {
+        padding: 30px;
     }
 }
 
-/* Ajustes para o botão de logout no dashboard */
-.dashboard-container .logout-button {
-    width: auto; /* Deixa o botão de logout ter largura automática */
-    padding: 12px 30px;
-    margin-top: 30px; /* Espaço superior */
+.dashboard-logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #dc3545;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.dashboard-logout-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
 }

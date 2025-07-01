@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <!-- Mantemos o container para o estilo base, mas adicionamos uma classe para ajustes específicos do dashboard -->
     <div class="container dashboard-container">
+       
+        <button class="dashboard-logout-button" onclick="location.href='/logout'">X</button>
+
         <h2>Visão Geral do Sistema</h2>
         <p class="welcome-message">Bem-vindo, Matheus! Aqui está um resumo rápido e estratégico do seu sistema.</p>
 
         <div class="dashboard-grid">
-            <!-- Card 1: Vendas Diárias -->
             <div class="card">
-                <div class="card-icon">📈</div>
+                <div class="card-icon">��</div>
                 <div class="card-content">
                     <h3>Vendas Diárias</h3>
                     <p class="metric">$ 1.250,00</p>
@@ -23,7 +24,6 @@
                 </div>
             </div>
 
-            <!-- Card 2: Novos Usuários -->
             <div class="card">
                 <div class="card-icon">👥</div>
                 <div class="card-content">
@@ -33,7 +33,6 @@
                 </div>
             </div>
 
-            <!-- Card 3: Pedidos Pendentes -->
             <div class="card">
                 <div class="card-icon">📦</div>
                 <div class="card-content">
@@ -43,7 +42,6 @@
                 </div>
             </div>
 
-            <!-- Card 4: Mensagens Não Lidas -->
             <div class="card">
                 <div class="card-icon">✉️</div>
                 <div class="card-content">
@@ -53,8 +51,6 @@
                 </div>
             </div>
         </div>
-
-        <button class="logout-button" onclick="location.href='/logout'">Sair</button>
     </div>
 </body>
 </html>
